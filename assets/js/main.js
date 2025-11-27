@@ -9,6 +9,7 @@
 (function() {
   "use strict";
 
+  event.preventDefault();  
   /**
   Contact form validation
   */
