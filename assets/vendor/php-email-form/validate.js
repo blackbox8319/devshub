@@ -6,7 +6,6 @@
 (function () {
   "use strict";
 
-  event.preventDefault();
 
   let forms = document.querySelectorAll('.php-email-form');
 
