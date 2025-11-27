@@ -13,9 +13,7 @@
   Contact form validation
   */
 
-document.addEventListener("DOMContentLoaded", function() {
-    event.preventDefault();  
-  
+document.addEventListener("DOMContentLoaded", function() {  
     const form = document.getElementById("contactForm");
     const submitBtn = document.getElementById("submitBtn");
     const nameField = document.getElementById("name-field");
