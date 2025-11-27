@@ -9,12 +9,13 @@
 (function() {
   "use strict";
 
-  event.preventDefault();  
   /**
   Contact form validation
   */
 
 document.addEventListener("DOMContentLoaded", function() {
+    event.preventDefault();  
+  
     const form = document.getElementById("contactForm");
     const submitBtn = document.getElementById("submitBtn");
     const nameField = document.getElementById("name-field");
