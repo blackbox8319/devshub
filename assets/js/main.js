@@ -10,6 +10,47 @@
   "use strict";
 
   /**
+  Contact form validation
+  */
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const nameField = document.getElementById("name-field");
+    const emailField = document.getElementById("email-field");
+    const subjectField = document.getElementById("subject-field");
+    const messageField = document.getElementById("message-field");
+
+    // Regex for standard email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function validateForm() {
+        let nameValid = nameField.value.trim() !== "";
+        let emailValid = emailRegex.test(emailField.value.trim());
+        let subjectValid = subjectField.value.trim() !== "";
+        let messageValid = messageField.value.trim() !== "";
+
+        // Enable button only if all fields are valid
+        submitBtn.disabled = !(nameValid && emailValid && subjectValid && messageValid);
+    }
+
+    // Validate on input
+    [nameField, emailField, subjectField, messageField].forEach(field => {
+        field.addEventListener("input", validateForm);
+    });
+
+      // Optional: prevent submission if JS somehow fails
+    form.addEventListener("submit", function(e) {
+        validateForm();
+        if (submitBtn.disabled) {
+            e.preventDefault();
+            alert("Please fill all fields correctly before submitting.");
+        }
+    });
+});
+
+
+  /**
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
