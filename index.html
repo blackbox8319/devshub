@@ -94,15 +94,30 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="position-relative vh-100 overflow-hidden">
 
-      <img src="assets/img/main-bg.png" alt="" data-aos="fade-in" class="">
+      <!-- Background Video -->
+      <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-1" autoplay muted loop playsinline>
+        <source src="https://hrcdn.net/fcore/assets/onboarding/globe-5fdfa9a0f4.mp4" type="video/mp4">
+      </video>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Shubham Tamrakar</h2>
-        <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <!-- Dark Overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-2"></div>
+
+      <!-- Content -->
+      <div
+        class="container position-relative z-3 text-center text-white d-flex flex-column justify-content-center h-100">
+
+        <h1 class="fw-semibold display-5 mb-3 text-light">
+          Welcome to my portfolio
+        </h1>
+
+        <p class="fs-4 fw-light text-white-50">
+          I'm
+          <span class="typed text-info fw-normal"
+            data-typed-items="Shubham Tamrakar, Designer, Developer, Freelancer"></span>
+        </p>
+
       </div>
 
     </section><!-- /Hero Section -->
