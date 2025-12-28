@@ -551,6 +551,10 @@ section,
   align-items: center;
   justify-content: center;
 }
+#hero h1,
+#hero p {
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
+}
 
 .hero img {
   position: absolute;
